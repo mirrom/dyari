@@ -3,7 +3,7 @@
 <div class="">
 
     {{#author}}
-        <header class="max-w-3xl mx-4 md:mx-auto">
+        <header class="max-w-3xl mx-4 mb-12 md:mx-auto">
             {{#if cover_image}}
                 <img class="" src="{{cover_image}}" alt="{{name}}" />
             {{/if}}
@@ -14,9 +14,9 @@
                 </figure>
             {{/if}}
 
-            <h1 class="my-12 font-bold text-4xl leading-tight">{{name}}</h1>
+            <h1 class="mt-12 font-bold text-4xl leading-tight">{{name}}</h1>
 
-            <div class="my-12 -mt-12 text-dyari-gray-light dark:text-dyari-gray-lighter">
+            <div class="text-dyari-gray-light dark:text-dyari-gray-lighter">
                 {{#if website}}
                     <a href="{{website}}" target="_blank" rel="noopener">Website</a>
                     {{#if twitter}}
