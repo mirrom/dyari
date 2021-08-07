@@ -12,7 +12,7 @@
 
             {{#if feature_image}}
                 <figure class="">
-                    <img class="h-48 w-full object-cover object-center"
+                    <img class="object-cover object-center w-full h-48"
                         srcset="{{img_url feature_image size="s"}} 300w,
                                 {{img_url feature_image size="m"}} 600w,
                                 {{img_url feature_image size="l"}} 1000w,
@@ -28,7 +28,7 @@
                 </figure>
             {{/if}}
             
-            <h1 class="max-w-3xl mx-4 my-12 font-bold text-4xl leading-tight md:mx-auto">{{title}}</h1>
+            <h1 class="max-w-3xl mx-4 my-12 text-4xl font-bold leading-tight md:mx-auto">{{title}}</h1>
         </header>
         
         <div class="gh-content">

@@ -6,7 +6,7 @@
         <header class="mb-12">
             {{#if feature_image}}
                 <figure class="">
-                    <img class="h-48 w-full object-cover object-center"
+                    <img class="object-cover object-center w-full h-48"
                         srcset="{{img_url feature_image size="s"}} 300w,
                                 {{img_url feature_image size="m"}} 600w,
                                 {{img_url feature_image size="l"}} 1000w,
@@ -17,12 +17,12 @@
                         alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
                     />
                     {{#if feature_image_caption}}
-                        <figcaption class=" font-light text-right text-sm text-dyari-gray-lighter">{{feature_image_caption}}</figcaption>
+                        <figcaption class="text-sm font-light text-right  text-dyari-gray-lighter">{{feature_image_caption}}</figcaption>
                     {{/if}}
                 </figure>
             {{/if}}
 
-            <div class="max-w-3xl mx-4 mt-2 font-thin text-sm md:mx-auto dark:text-dyari-gray-lighter">
+            <div class="max-w-3xl mx-4 mt-2 text-sm font-thin md:mx-auto dark:text-dyari-gray-lighter">
                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
                 <span>&bull;</span>
                 {{reading_time}}
@@ -32,12 +32,12 @@
                 {{/foreach}}
             </div>
 
-            <h1 class="max-w-3xl mx-4 font-bold text-4xl leading-tight md:mx-auto">{{title}}</h1>
+            <h1 class="max-w-3xl mx-4 text-4xl font-bold leading-tight md:mx-auto">{{title}}</h1>
 
             {{#if tags}}
                 <ul class="max-w-3xl mx-4 mt-2 md:mx-auto">
                     {{#foreach tags}}
-                        <li class="inline-block mr-1 rounded-3xl font-light uppercase text-sm bg-dyari-gray-very-light hover:bg-dyari-gray-light dark:bg-dyari-gray-dark dark:hover:bg-dyari-gray-light">
+                        <li class="inline-block mr-1 text-sm font-light uppercase rounded-3xl bg-dyari-gray-very-light hover:bg-dyari-gray-light dark:bg-dyari-gray-dark dark:hover:bg-dyari-gray-light">
                             <a class="px-2 py-1 text-dyari-gray-light hover:text-dyari-gray-very-light dark:text-dyari-gray-light dark:hover:text-dyari-gray-dark tag tag-{{id}} {{slug}}" href="{{url absolute="true"}}" title="{{name}}">{{name}}</a>
                         </li>
                     {{/foreach}}
@@ -55,7 +55,7 @@
 
     </article>
 
-    <aside class="grid grid-cols-2 gap-4 max-w-3xl mx-4 my-12 font-bold leading-tight md:mx-auto">
+    <aside class="grid max-w-3xl grid-cols-2 gap-4 mx-4 my-12 font-bold leading-tight md:mx-auto">
         <div class="">
             {{#next_post}}
                 <a class="flex" href="{{url}}">

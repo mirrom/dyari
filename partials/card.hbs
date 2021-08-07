@@ -3,7 +3,7 @@
     <a class="flex flex-col text-dyari-gray-dark hover:text-dyari-gray-dark sm:flex-row dark:text-dyari-gray-lightest dark:hover:text-dyari-gray-lightest" href="{{url}}">
 
         {{#if feature_image}}
-            <img class="h-24 object-cover object-center sm:w-36 sm:h-auto"
+            <img class="object-cover object-center h-24 sm:w-36 sm:h-auto"
                 srcset="{{img_url feature_image size="s"}} 300w,
                         {{img_url feature_image size="m"}} 600w,
                         {{img_url feature_image size="l"}} 1000w,
@@ -17,13 +17,13 @@
         {{/if}}
 
         <div class="mx-2 mb-2">
-            <span class="font-thin text-xs dark:text-dyari-gray-lighter">
+            <span class="text-xs font-thin dark:text-dyari-gray-lighter">
                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D. MMMM YYYY"}}</time>
             </span>
-            <h2 class="block font-medium text-xl leading-tight">
+            <h2 class="block text-xl font-medium leading-tight">
                 {{title}}
             </h2>
-            <p class="hidden font-extralight text-dyari-gray leading-tight sm:block sm:pt-1 dark:text-dyari-gray-light">
+            <p class="hidden leading-tight font-extralight text-dyari-gray sm:block sm:pt-1 dark:text-dyari-gray-light">
                 {{excerpt}}
             </p>
         </div>
