@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+
+    <title>{{meta_title}}</title>
+
+    {{ghost_head}}
+
+</head>
+
+<body class="text-dyari-gray-dark bg-white leading-normal dark:text-dyari-gray-lightest dark:bg-dyari-gray-darkest {{body_class}}">
+
+    <header class="bg-dyari-gray-darker">
+        <nav class="text-center sm:flex sm:text-left">
+            {{#if @site.logo}}
+                <div class="p-3 my-auto">
+                    <a class="" href="{{@site.url}}">
+                        <img class="h-10 object-fill" src="{{@site.logo}}" alt="{{@site.title}}" />
+                    </a>
+                </div>
+            {{else}}
+                <div class="p-3 text-4xl font-extrabold">
+                    <a class="text-dyari-gray-lightest hover:text-dyari-gray-lightest" href="{{@site.url}}">
+                        {{@site.title}}
+                    </a>
+                </div>
+            {{/if}}
+
+            {{navigation}}
+        </nav>
+    </header>
+
+    <main class="mx-auto">
+        {{{body}}}
+    </main>
+
+    <footer class="mt-12 mx-4 font-thin text-xs text-center md:mx-auto">
+        <div class="">
+            <div class="w-3 mx-auto my-2 text-red-500">
+                {{> "icons/heart"}}
+            </div>
+            <div class="my-2">
+                <div class="">
+                    Published with <a class="text-indigo-500 hover:text-indigo-400 dark:text-indigo-300" href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </div>
+                <div class="">
+                    Polished with <a class="text-indigo-500 hover:text-indigo-400 dark:text-indigo-300" href="https://tailwindcss.com" target="_blank" rel="noopener">Tailwind CSS</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex my-2 justify-center">
+            <div class="w-8 mx-1">
+                <a class="text-dyari-gray hover:text-dyari-gray-darkest dark:hover:text-dyari-gray-lightest"
+                        href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/"
+                        title="RSS"
+                        target="_blank"
+                        rel="noopener">
+                    {{> "icons/rss"}}
+                </a>
+            </div>
+            {{#if @site.facebook}}
+                <div class="w-8 mx-1">
+                    <a class="text-dyari-gray hover:text-dyari-gray-darkest dark:hover:text-dyari-gray-lightest"
+                            href="{{facebook_url @site.facebook}}"
+                            title="Facebook"
+                            target="_blank"
+                            rel="noopener">
+                        {{> "icons/facebook"}}
+                    </a>
+                </div>
+            {{/if}}
+            {{#if @site.twitter}}
+                <div class="w-8 mx-1">
+                    <a class="text-dyari-gray hover:text-dyari-gray-darkest dark:hover:text-dyari-gray-lightest"
+                            href="{{twitter_url @site.twitter}}"
+                            title="Twitter"
+                            target="_blank"
+                            rel="noopener">
+                        {{> "icons/twitter"}}
+                    </a>
+                </div>
+            {{/if}}
+        </div>
+    </footer>
+
+    {{!-- <foot> --}}
+
+    <script src="{{asset "built/jquery-3.6.0.min.js"}}"></script>
+
+    {{#if pagination.pages}}
+        <script>
+            var maxPages = parseInt('{{pagination.pages}}');
+        </script>
+        <script src="{{asset "built/infinitescroll.js"}}"></script>
+    {{/if}}
+
+    <script>
+        $(document).ready(function () {
+            // Mobile Menu Trigger
+            $('.gh-burger').click(function () {
+                $('body').toggleClass('gh-head-open');
+            });
+        });
+    </script>
+
+    {{#is "post, page"}}
+        <script src="{{asset "built/jquery.fitvids.js"}}"></script>
+        <script>
+            var images = document.querySelectorAll('.kg-gallery-image img');
+            images.forEach(function (image) {
+                var container = image.closest('.kg-gallery-image');
+                var width = image.attributes.width.value;
+                var height = image.attributes.height.value;
+                var ratio = width / height;
+                container.style.flex = ratio + ' 1 0%';
+            });
+            $(document).ready(function () {
+                var $postContent = $(".gh-content");
+                $postContent.fitVids();
+            });
+        </script>
+    {{/is}}
+
+    {{ghost_foot}}
+
+</body>
+</html>

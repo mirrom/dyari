@@ -1,0 +1,9 @@
+<ul class="py-2 text-lg font-extralight sm:ml-auto sm:my-auto sm:px-2">
+    {{#foreach navigation}}
+        <li class="my-1 sm:pt-0 sm:px-2 sm:inline-block nav-{{slug}}">
+            <a class="py-2 {{#if current}}text-dyari-gray-lightest hover:text-dyari-gray-lightest{{/if}} {{#unless current}}text-dyari-gray-light hover:text-dyari-gray-very-light{{/unless}}" href="{{url absolute="true"}}">
+                {{label}}
+            </a>
+        </li>
+    {{/foreach}}
+</ul>

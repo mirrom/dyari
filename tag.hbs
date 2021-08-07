@@ -1,0 +1,41 @@
+{{!< default}}
+
+<div class="">
+
+    {{#tag}}
+        <header class="">
+            {{#if feature_image}}
+                <figure class="">
+                    <img class="h-48 w-full object-cover object-center"
+                        srcset="{{img_url feature_image size="s"}} 300w,
+                                {{img_url feature_image size="m"}} 600w,
+                                {{img_url feature_image size="l"}} 1000w,
+                                {{img_url feature_image size="xl"}} 2000w"
+                        sizes="(max-width: 1000px) 1000px, 2000px"
+                        loading="lazy"
+                        src="{{img_url feature_image size="xl"}}"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    />
+                    {{#if feature_image_caption}}
+                        <figcaption>{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>
+            {{/if}}
+
+            <h1 class="max-w-3xl mx-4 my-12 font-bold text-4xl leading-tight md:mx-auto">{{name}}</h1>
+
+            {{#if description}}
+                <p class="max-w-3xl mx-4 my-12 font-serif text-xl leading-relaxed md:mx-auto">
+                    {{description}}
+                </p>
+            {{/if}}
+        </header>
+    {{/tag}}
+
+    <div class="">
+        {{#foreach posts}}
+            {{> "card"}}
+        {{/foreach}}
+    </div>
+
+</div>

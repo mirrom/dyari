@@ -1,0 +1,55 @@
+{{!< default}}
+
+<div class="">
+
+    {{#author}}
+        <header class="max-w-3xl mx-4 md:mx-auto">
+            {{#if cover_image}}
+                <img class="" src="{{cover_image}}" alt="{{name}}" />
+            {{/if}}
+
+            {{#if profile_image}}
+                <figure class="mt-6 -mb-6">
+                    <img class="w-36 rounded-full" src="{{profile_image}}" alt="{{name}}" />
+                </figure>
+            {{/if}}
+
+            <h1 class="my-12 font-bold text-4xl leading-tight">{{name}}</h1>
+
+            <div class="my-12 -mt-12 text-dyari-gray-light dark:text-dyari-gray-lighter">
+                {{#if website}}
+                    <a href="{{website}}" target="_blank" rel="noopener">Website</a>
+                    {{#if twitter}}
+                        <span>&bull;</span>
+                    {{else}}
+                        {{#if facebook}}
+                            <span>&bull;</span>
+                        {{/if}}
+                    {{/if}}
+                {{/if}}
+                {{#if twitter}}
+                    <a href="{{twitter_url}}" target="_blank" rel="noopener">Twitter</a>
+                    {{#if facebook}}
+                        <span>&bull;</span>
+                    {{/if}}
+                {{/if}}
+                {{#if facebook}}
+                    <a href="{{facebook_url}}" target="_blank" rel="noopener">Facebook</a>
+                {{/if}}
+            </div>
+
+            {{#if bio}}
+                <p class="my-12 font-serif text-xl leading-relaxed">
+                    {{bio}}
+                </p>
+            {{/if}}
+        </header>
+    {{/author}}
+
+    <div class="">
+        {{#foreach posts}}
+            {{> "card"}}
+        {{/foreach}}
+    </div>
+
+</div>

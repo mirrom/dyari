@@ -1,0 +1,33 @@
+{{!< ../default}}
+
+<div class="">
+
+    {{#if @member.paid}}
+
+        {{!-- Logged in, paying member: Show account info --}}
+        <div class="">
+            <h2 class="">Nice, you're a subscriber!</h2>
+            <p>Hey! <strong>{{@member.email}}</strong> has an active {{@site.title}} account with access to all areas. You're all set, but if you need any help, get in touch with us and we'd be happy to help.</p>
+        </div>
+
+    {{else if @member}}
+
+        {{!-- Logged in, not paying: Link to checkout --}}
+        <div class="">
+            <h1 class="">Currently, you're not a subscriber</h1>
+            <p>Hey there! <strong>{{@member.email}}</strong> is subscribed to free updates from {{@site.title}}, but doesn't have a paid subscription to unlock full access.</p>
+            <div class="">
+                <a class="" href="/signup/">
+                    <span class="">Subscribe now</span>
+                </a>
+            </div>
+        </div>
+
+    {{else}}
+
+        {{!-- Not logged in: Redirect to signin --}}
+        <script>window.location = '{{@site.url}}/signin/';</script>
+
+    {{/if}}
+
+</div>

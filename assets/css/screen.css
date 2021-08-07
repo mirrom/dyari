@@ -1,0 +1,90 @@
+/* Tailwind */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+/* Defaults */
+
+a {
+    @apply text-green-500 hover:text-green-600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-sans text-dyari-gray-darkest dark:text-dyari-gray-lightest;
+}
+
+
+/* Ghost content */
+
+.gh-content {
+    @apply prose max-w-full font-serif text-xl text-dyari-gray-dark leading-relaxed dark:text-dyari-gray-very-light;
+}
+
+.gh-content > * {
+    @apply max-w-3xl mx-4 md:mx-auto;
+}
+
+.gh-content a {
+    @apply no-underline text-green-500 hover:text-green-600;
+}
+
+.gh-content h1, .gh-content h2, .gh-content h3, .gh-content h4, .gh-content h5, .gh-content h6 {
+    @apply font-sans text-dyari-gray-darkest dark:text-dyari-gray-lightest;
+}
+
+.gh-content blockquote {
+    @apply text-dyari-gray dark:text-dyari-gray-lighter;
+}
+
+.gh-content code {
+    @apply text-dyari-gray dark:text-dyari-gray-lighter;
+}
+
+.gh-content hr {
+    @apply border-dyari-gray-very-light dark:border-dyari-gray;
+}
+
+.gh-content figure figcaption {
+    @apply text-center text-dyari-gray dark:text-dyari-gray-lighter;
+}
+
+
+/* Ghost defaults */
+
+.kg-width-wide {
+    @apply max-w-5xl;
+}
+
+.kg-width-full {
+    @apply max-w-full;
+}
+
+.kg-gallery-card {
+    @apply mb-3;
+}
+
+.kg-gallery-card figcaption {
+    @apply -mt-4 mb-6;
+}
+
+.kg-gallery-container {
+    @apply flex flex-col w-screen max-w-screen-lg mx-auto my-6;
+}
+
+.kg-gallery-row {
+    @apply flex flex-row justify-center;
+}
+
+.kg-gallery-image img {
+    @apply block w-full h-full m-0;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+    @apply mt-3;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+    @apply ml-3;
+}

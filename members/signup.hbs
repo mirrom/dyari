@@ -1,0 +1,71 @@
+{{!< ../default}}
+
+<div class="">
+
+    {{#if @member.paid}}
+
+        {{!-- Logged in, paying member: Redirect home --}}
+        <script>window.location = '{{@site.url}}';</script>
+
+    {{else if @member}}
+
+        {{!-- Logged in, not paying: Check out --}}
+        <div class="">
+            <h1 class="">Choose your subscription</h1>
+            <p>Unlock full access to {{@site.title}} and see the entire library of members-only content & updates</p>
+            <div class="">
+                <div class="">
+                    <header class="">
+                        <h3>Monthly</h3>
+                        <span>$</span><strong>{{@price.monthly}}</strong> / month
+                    </header>
+                    <div class="">
+                        <ul>
+                            <li>Full access to all private posts</li>
+                            <li>Regular updates with new content</li>
+                            <li>Support independent publishing</li>
+                            <li>Simple, secure card payment</li>
+                        </ul>
+                        <a class="" href="javascript:void(0)" data-members-plan="Monthly">Choose this plan</a>
+                    </div>
+                </div>
+                <div class="">
+                    <header class="">
+                        <h3>Yearly</h3>
+                        <span>$</span><strong>{{@price.yearly}}</strong> / year
+                    </header>
+                    <div class="">
+                        <ul>
+                            <li>Full access to all private posts</li>
+                            <li>Regular updates with new content</li>
+                            <li>Support independent publishing</li>
+                            <li>Simple, secure card payment</li>
+                            <li>One easy payment instead of 12!</li>
+                        </ul>
+                        <a class="" href="javascript:void(0)" data-members-plan="Yearly">Choose this plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{else}}
+
+        {{!-- Not logged in: Sign up --}}
+        <form class="" data-members-form="signup">
+            <h1 class="">Signup to {{@site.title}}</h1>
+            <p>{{@site.description}}</p>
+            <div class="">
+                <input aria-label="Email Address" class="" data-members-email type="email" placeholder="youremail@example.com" required="true" autocomplete="false" autofocus />
+                <button class="" type="submit">
+                    <span class="">Continue</span>
+                    <span class="">{{> "icons/loader"}}</span>
+                </button>
+            </div>
+            <p><small>Already have an account? <a href="/signin/">Sign in</a></small></p>
+            <div class=""><strong>Great!</strong> Check your inbox and click the link to confirm your subscription</div>
+            <div class="">Please enter a valid email address!</div>
+        </form>
+
+    {{/if}}
+
+</div>

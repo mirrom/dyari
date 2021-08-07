@@ -1,0 +1,76 @@
+{{!< default}}
+
+{{#post}}
+    <article class="{{post_class}}">
+
+        <header class="mb-12">
+            {{#if feature_image}}
+                <figure class="">
+                    <img class="h-48 w-full object-cover object-center"
+                        srcset="{{img_url feature_image size="s"}} 300w,
+                                {{img_url feature_image size="m"}} 600w,
+                                {{img_url feature_image size="l"}} 1000w,
+                                {{img_url feature_image size="xl"}} 2000w"
+                        sizes="(max-width: 1000px) 1000px, 2000px"
+                        loading="lazy"
+                        src="{{img_url feature_image size="xl"}}"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    />
+                    {{#if feature_image_caption}}
+                        <figcaption class=" font-light text-right text-sm text-dyari-gray-lighter">{{feature_image_caption}}</figcaption>
+                    {{/if}}
+                </figure>
+            {{/if}}
+
+            <div class="max-w-3xl mx-4 mt-2 font-thin text-sm md:mx-auto dark:text-dyari-gray-lighter">
+                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+                <span>&bull;</span>
+                {{reading_time}}
+                {{#foreach authors}}
+                    <span>&bull;</span>
+                    <a href="{{url}}"><div class="inline-block">{{name}}</div></a>
+                {{/foreach}}
+            </div>
+
+            <h1 class="max-w-3xl mx-4 font-bold text-4xl leading-tight md:mx-auto">{{title}}</h1>
+
+            {{#if tags}}
+                <ul class="max-w-3xl mx-4 mt-2 md:mx-auto">
+                    {{#foreach tags}}
+                        <li class="inline-block mr-1 rounded-3xl font-light uppercase text-sm bg-dyari-gray-very-light hover:bg-dyari-gray-light dark:bg-dyari-gray-dark dark:hover:bg-dyari-gray-light">
+                            <a class="px-2 py-1 text-dyari-gray-light hover:text-dyari-gray-very-light dark:text-dyari-gray-light dark:hover:text-dyari-gray-dark tag tag-{{id}} {{slug}}" href="{{url absolute="true"}}" title="{{name}}">{{name}}</a>
+                        </li>
+                    {{/foreach}}
+                </ul>
+            {{/if}}            
+        </header>
+
+        <div class="gh-content">
+            {{content}}
+        </div>
+        
+        <footer class="max-w-3xl mx-4 mt-12 md:mx-auto">
+
+        </footer>
+
+    </article>
+
+    <aside class="grid grid-cols-2 gap-4 max-w-3xl mx-4 my-12 font-bold leading-tight md:mx-auto">
+        <div class="">
+            {{#next_post}}
+                <a class="flex" href="{{url}}">
+                    <div class="w-4 mt-1">{{> "icons/arrow-left"}}</div>
+                    <div class="pl-2">{{title}}</div>
+                </a>
+            {{/next_post}}
+        </div>
+        <div class="">
+            {{#prev_post}}
+                <a class="flex justify-end" href="{{url}}">
+                    <div class="pr-2 text-right">{{title}}</div>
+                    <div class="w-4 mt-1">{{> "icons/arrow-right"}}</div>
+                </a>
+            {{/prev_post}}
+        </div>
+    </aside>
+{{/post}}

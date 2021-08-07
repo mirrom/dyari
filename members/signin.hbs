@@ -1,0 +1,30 @@
+{{!< ../default}}
+
+<div class="">
+
+    {{#if @member}}
+
+        {{!-- Logged in: Redirect home --}}
+        <script>window.location = '{{@site.url}}';</script>
+
+    {{else}}
+
+        {{!-- Not logged in: Signin form --}}
+        <form class="" data-members-form="signin">
+            <h1 class="">Welcome back!</h1>
+            <p>Sign into your account again for full access</p>
+            <div class="">
+                <input aria-label="Email Address" class="gh-input" data-members-email type="email" placeholder="Your email address" required="true" autocomplete="false" autofocus />
+                <button class="" type="submit">
+                    <span class="">Sign in</span>
+                    <span class="">{{> "icons/loader"}}</span>
+                </button>
+            </div>
+            <p><small>Don't have an account yet? <a href="/signup/">Sign up</a></small></p>
+            <div class=""><strong>Great!</strong> Check your inbox and click the link to complete signin</div>
+            <div class="">Please enter a valid email address!</div>
+        </form>
+
+    {{/if}}
+
+</div>
