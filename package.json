@@ -1,13 +1,13 @@
 {
     "name": "dyari",
-    "description": "A diary theme",
+    "description": "A minimalistic Ghost theme",
     "demo": "https://dyari.romstadt.net",
     "version": "1.0.0",
     "engines": {
         "ghost": ">=4.0.0",
         "ghost-api": "v4"
     },
-    "license": "MIT",
+    "license": "GPL-3.0-or-later",
     "screenshots": {
         "desktop": "assets/screenshot-desktop.jpg"
     },
