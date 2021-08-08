@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/photoswipe@4.1.3/dist/photoswipe.css" />
 
     <title>{{meta_title}}</title>
 
@@ -113,10 +114,16 @@
         </div>
     </footer>
 
+    {{> pswp}}
+
     {{!-- <foot> --}}
 
     <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://unpkg.com/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+    <script src="https://unpkg.com/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+    
+    <script src="{{asset "built/main.js"}}"></script>
 
     {{#if pagination.pages}}
         <script>

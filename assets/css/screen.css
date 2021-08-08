@@ -62,6 +62,10 @@ figure figcaption {
   @apply border-dyari-gray-very-light dark:border-dyari-gray;
 }
 
+.gh-content .kg-gallery-card .kg-gallery-image {
+  @apply cursor-pointer;
+}
+
 /* Ghost Defaults */
 
 .kg-width-wide {
