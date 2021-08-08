@@ -7,7 +7,7 @@
 /* Defaults */
 
 a {
-  @apply text-green-500 hover:text-green-600;
+    @apply text-green-500 hover:text-green-600;
 }
 
 h1,
@@ -16,37 +16,37 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-sans text-dyari-gray-darkest dark:text-dyari-gray-lightest;
+    @apply font-sans text-dyari-gray-darkest dark:text-dyari-gray-lightest;
 }
 
 blockquote {
-  @apply text-dyari-gray dark:text-dyari-gray-lighter;
+    @apply text-dyari-gray dark:text-dyari-gray-lighter;
 }
 
 code {
-  @apply text-dyari-gray dark:text-dyari-gray-lighter;
+    @apply text-dyari-gray dark:text-dyari-gray-lighter;
 }
 
 hr {
-  @apply border-dyari-gray-very-light dark:border-dyari-gray;
+    @apply border-dyari-gray-very-light dark:border-dyari-gray;
 }
 
 figure figcaption {
-  @apply text-center text-dyari-gray dark:text-dyari-gray-lighter;
+    @apply text-center text-dyari-gray dark:text-dyari-gray-lighter;
 }
 
 /* Ghost Content */
 
 .gh-content {
-  @apply prose max-w-full font-serif text-xl leading-relaxed dark:prose-dark;
+    @apply prose max-w-full font-serif text-xl leading-relaxed dark:prose-dark;
 }
 
 .gh-content > * {
-  @apply max-w-3xl mx-4 md:mx-auto;
+    @apply max-w-3xl mx-4 md:mx-auto;
 }
 
 .gh-content a {
-  @apply no-underline;
+    @apply no-underline;
 }
 
 .gh-content h1,
@@ -55,51 +55,51 @@ figure figcaption {
 .gh-content h4,
 .gh-content h5,
 .gh-content h6 {
-  @apply font-sans;
+    @apply font-sans;
 }
 
 .gh-content hr {
-  @apply border-dyari-gray-very-light dark:border-dyari-gray;
+    @apply border-dyari-gray-very-light dark:border-dyari-gray;
 }
 
 .gh-content .kg-gallery-card .kg-gallery-image {
-  @apply cursor-pointer;
+    @apply cursor-pointer;
 }
 
 /* Ghost Defaults */
 
 .kg-width-wide {
-  @apply max-w-5xl;
+    @apply max-w-5xl;
 }
 
 .kg-width-full {
-  @apply max-w-full;
+    @apply max-w-full;
 }
 
 /* Ghost Gallery */
 
 .kg-gallery-card + .kg-gallery-card {
-  @apply mt-3;
+    @apply mt-3;
 }
 
 .kg-gallery-container {
-  @apply relative;
+    @apply relative;
 }
 
 .kg-gallery-row {
-  @apply flex flex-row justify-center;
+    @apply flex flex-row justify-center;
 }
 
 .kg-gallery-image img {
-  @apply block w-full h-full m-0;
+    @apply block w-full h-full m-0;
 }
 
 .kg-gallery-row:not(:first-of-type) {
-  @apply mt-3;
+    @apply mt-3;
 }
 
 .kg-gallery-image:not(:first-of-type) {
-  @apply ml-3;
+    @apply ml-3;
 }
 
 /* Ghost Bookmark */

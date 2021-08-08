@@ -1,6 +1,6 @@
 {
-  "extends": ["@tryghost:theme"],
-  "node": {
-    "supportPolicy": ["lts_latest"]
-  }
+    "extends": ["@tryghost:theme"],
+    "node": {
+        "supportPolicy": ["lts_latest"]
+    }
 }
