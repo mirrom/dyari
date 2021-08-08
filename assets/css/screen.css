@@ -15,11 +15,27 @@ h1, h2, h3, h4, h5, h6 {
     @apply font-sans text-dyari-gray-darkest dark:text-dyari-gray-lightest;
 }
 
+blockquote {
+    @apply text-dyari-gray dark:text-dyari-gray-lighter;
+}
 
-/* Ghost content */
+code {
+    @apply text-dyari-gray dark:text-dyari-gray-lighter;
+}
+
+hr {
+    @apply border-dyari-gray-very-light dark:border-dyari-gray;
+}
+
+figure figcaption {
+    @apply text-center text-dyari-gray dark:text-dyari-gray-lighter;
+}
+
+
+/* Ghost Content */
 
 .gh-content {
-    @apply prose max-w-full font-serif text-xl text-dyari-gray-dark leading-relaxed dark:text-dyari-gray-very-light;
+    @apply prose max-w-full font-serif text-xl leading-relaxed dark:prose-dark;
 }
 
 .gh-content > * {
@@ -27,31 +43,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gh-content a {
-    @apply no-underline text-green-500 hover:text-green-600;
+    @apply no-underline;
 }
 
 .gh-content h1, .gh-content h2, .gh-content h3, .gh-content h4, .gh-content h5, .gh-content h6 {
-    @apply font-sans text-dyari-gray-darkest dark:text-dyari-gray-lightest;
-}
-
-.gh-content blockquote {
-    @apply text-dyari-gray dark:text-dyari-gray-lighter;
-}
-
-.gh-content code {
-    @apply text-dyari-gray dark:text-dyari-gray-lighter;
+    @apply font-sans;
 }
 
 .gh-content hr {
     @apply border-dyari-gray-very-light dark:border-dyari-gray;
 }
 
-.gh-content figure figcaption {
-    @apply text-center text-dyari-gray dark:text-dyari-gray-lighter;
-}
 
-
-/* Ghost defaults */
+/* Ghost Gallery */
 
 .kg-width-wide {
     @apply max-w-5xl;
