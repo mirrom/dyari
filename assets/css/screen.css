@@ -61,16 +61,12 @@ h1, h2, h3, h4, h5, h6 {
     @apply max-w-full;
 }
 
-.kg-gallery-card {
-    @apply mb-3;
-}
-
-.kg-gallery-card figcaption {
-    @apply -mt-4 mb-6;
+.kg-gallery-card + .kg-gallery-card {
+    @apply mt-3;
 }
 
 .kg-gallery-container {
-    @apply flex flex-col max-w-screen-lg mx-auto my-6;
+    @apply relative;
 }
 
 .kg-gallery-row {
