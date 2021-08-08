@@ -14,6 +14,7 @@
     "scripts": {
         "dev": "gulp",
         "zip": "gulp zip",
+        "format": "prettier --write .",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "gulp build",
@@ -60,6 +61,7 @@
         "postcss": "^8.3.6",
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "3.0.0",
+        "prettier": "2.3.2",
         "pump": "^3.0.0"
     },
     "browserslist": [

@@ -1,0 +1,6 @@
+*.min.js
+*.hbs
+assets/built
+dist
+node_modules
+package.json
