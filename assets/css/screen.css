@@ -62,7 +62,7 @@ figure figcaption {
   @apply border-dyari-gray-very-light dark:border-dyari-gray;
 }
 
-/* Ghost Gallery */
+/* Ghost Defaults */
 
 .kg-width-wide {
   @apply max-w-5xl;
@@ -71,6 +71,8 @@ figure figcaption {
 .kg-width-full {
   @apply max-w-full;
 }
+
+/* Ghost Gallery */
 
 .kg-gallery-card + .kg-gallery-card {
   @apply mt-3;
@@ -94,4 +96,36 @@ figure figcaption {
 
 .kg-gallery-image:not(:first-of-type) {
   @apply ml-3;
+}
+
+/* Ghost Bookmark */
+
+.kg-bookmark-card {
+}
+
+.kg-bookmark-container {
+}
+
+.kg-bookmark-content {
+}
+
+.kg-bookmark-title {
+}
+
+.kg-bookmark-description {
+}
+
+.kg-bookmark-metadata {
+}
+
+.kg-bookmark-icon {
+}
+
+.kg-bookmark-author {
+}
+
+.kg-bookmark-publisher {
+}
+
+.kg-bookmark-thumbnail {
 }
